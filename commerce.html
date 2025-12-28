@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+    <title>IMAR-aeroport Commerce</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="img/IMAR (3).png" rel="icon" />
+    <link href="img/IMAR (3).png" rel="apple-touch-icon" />
+
+    <!-- Vendor CSS Files -->
+    <link href="css/aos.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style,header,footer.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!----------------------------------------------->
+    <header class="header sticky nav-open">
+      <nav class="navv-logo">
+        <img class="logo" src="css/img/IMAR (4).png" alt="logo" />
+        <h22>Aéroport Hassan I Laâyoune</h22>
+      </nav>
+      <div class="nav-container">
+        <nav class="navv">
+          <a class="navv-linkk" href="accueil.html">
+            <ion-icon name="home" class="icon"></ion-icon>Accueil</a
+          >
+
+          <a class="navv-linkk" href="vols.php">Vols</a>
+          <a class="navv-linkk" href="St&Tr.php">Parking & Transport</a>
+          <a class="navv-linkk" href="commerce.html">Commerce</a>
+          <a class="navv-linkk" href="guide.html">Guide</a>
+        </nav>
+      </div>
+      <div class="icon-header">
+        <div class="icon-search">
+          <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+         
+        </dav>
+    
+        <button class="mobile-nav-btn">
+          <ion-icon name="menu"></ion-icon>
+          <ion-icon name="close"></ion-icon>
+        </button>
+
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          id="search-bar"
+          placeholder="Ce que vous recherchez..."
+        />
+       <label for="search-bar" class="fas fa-search"></label>
+      </form>
+
+    </header>
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+
+    <main id="main">
+      <div class="comm">
+        <h4>Commerce</h4>
+        <h5>Aéroport Hassan I Laâyoune</h5>
+      </div>
+
+      <!-- <button id="close">&times;</button> -->
+      <div class="popup">
+        <img src="img/vvv.png" />
+        <br />
+        <br />
+        <h2>Annonce</h2>
+        <p>
+         Opportunité à saisir: les locaux commerciaux au sein de l'aéroport sont à louer contactez a.zain@onda.ma
+        </p>
+        <button type="button" onclick="closePopup()" class="close">OK</button>
+      </div>
+      <script src="js/popup.js"></script>
+
+      <!-- ======= Menu Section ======= -->
+      <section id="menu" class="menu section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>COMMERCE</h2>
+            <p>Boutiques, restaurants et cafés</p>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="menu-flters">
+                <li data-filter="*" class="filter-active">Tous</li>
+                <li data-filter=".filter-starters">Cafés</li>
+                <li data-filter=".filter-salads">Restaurants</li>
+                <li data-filter=".filter-specialty">Boutiques</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="row menu-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="col-lg-6 menu-item filter-starters">
+              <img src="img/cf.jpeg" class="menu-img" alt="" />
+              <div class="menu-content">
+                <a href="#">YOP CAFÉ</a><span>Hall Public</span>
+              </div>
+              <div class="menu-ingredients">Cafétéria</div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+              <img src="img/rs.jpeg" class="menu-img" alt="" />
+              <div class="menu-content">
+                <a href="#">Restaurant</a><span>Hall Public</span>
+              </div>
+              <div class="menu-ingredients">Fast food</div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="img/simar.jpg" class="menu-img" alt="" />
+              <div class="menu-content">
+                <a href="#">Simar boutique</a><span>Hall Public</span>
+              </div>
+              <div class="menu-ingredients">Magasin de chaussures</div>
+            </div>
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="img/mr.jpeg" class="menu-img" alt="" />
+              <div class="menu-content">
+                <a href="#"> Aux merveilles du Sahara</a
+                ><span>Hall Public</span>
+              </div>
+              <div class="menu-ingredients">Vente des produits artisanaux.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Menu Section -->
+
+      <!-- ======= Specials Section ======= -->
+      <section id="specials" class="specials">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>banques/Agences</h2>
+            <p>Banques et Agences disponibles</p>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3">
+              <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active show"
+                    data-bs-toggle="tab"
+                    href="#tab-1"
+                    >La Bank of Africa</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2"
+                    >Barid Banque</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3"
+                    >Amanbag</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4"
+                    >Faydoul Tours</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-5"
+                    >AVIS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tab-1">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>La Bank of Africa</h3>
+                      <p class="fst-italic">
+                        La Bank of Africa, anciennement BMCE Bank of Africa
+                      </p>
+                      <p>
+                        Banque Marocaine du Commerce Extérieur est une banque
+                        commerciale marocaine.
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="img/bmce.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Barid Bank</h3>
+                      <p class="fst-italic">
+                        Al Barid Bank est une banque postale marocaine de la
+                        transformation des services financiers de Poste Maroc
+                        (Barid Al Maghrib).
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="img/barid (2).jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>AmanBAG</h3>
+                      <p class="fst-italic">
+                        Il s'agit d'une agence spécialisée dans l'emballage en
+                        carton et en papier.
+                      </p>
+                      <p>
+                        Qui fournit des solutions personnalisées pour répondre
+                        aux besoins uniques de nos clients. Ils comprennent que
+                        chaque produit nécessite un emballage spécial pour une
+                        protection optimale.
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="img/amanbag.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Faydoul tours Agence de voyage</h3>
+                      <p class="fst-italic">
+                        Une agence de voyages spécialisée dans la planification
+                        et l'organisation de voyages pour les clients
+                      </p>
+                      <p>
+                        Offrant une gamme de services tels que la réservation de
+                        vols, d'hébergement et d'activités touristiques pour
+                        rendre les voyages plus faciles et plus agréables.
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="img/fay.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-5">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>AVIS Location de voiture</h3>
+                      <p class="fst-italic">
+                        L'agence de location de voitures offrent une variété de
+                        services, notamment la location de voitures pour des
+                        périodes courtes ou longues,
+                      </p>
+                      <p>
+                        la location avec chauffeur, la location de voitures de
+                        luxe ou de voitures de déménagement, et bien d'autres.
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="img/avis.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Specials Section -->
+
+      <!-- ======= Events Section ======= -->
+      <section id="events" class="events">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Gallery</h2>
+            <p>Notre salon VIP</p>
+          </div>
+
+          <div
+            class="events-slider swiper"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="row event-item">
+                  <div class="col-lg-9">
+                    <center>
+                      <img src="img/salonn.jpeg" class="img-fluidd" alt="" />
+                    </center>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="row event-item">
+                  <div class="col-lg-10">
+                    <img src="img/cafee.jpeg" class="img-fluidd" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="row event-item">
+                  <div class="col-lg-10">
+                    <img src="img/ip.jpg" class="img-fluidd" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Events Section -->
+    </main>
+    <!-- End #main -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+   
+
+  
+  <footer class="footer">
+    <div class="logo-footer">
+      <div class="cent-foo">
+        <img src="css/img/OIP2.jfif" class="logo-fo" />
+        <h7>Aéroport Hassan I Laâyoune</h7>
+      </div>
+      <div class="reseau-s">
+        <ion-icon name="logo-tiktok" class="logo-tiktok"></ion-icon>
+        <ion-icon name="logo-facebook" class="logo-facebook"></ion-icon>
+        <ion-icon name="logo-twitter" class="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram" class="logo-instagram"></ion-icon>
+      </div>
+    </div>
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+    <div class="list-footer">
+      <a href="vols.php" class="vol-foot">
+        <img src="css/img/vol.jfif" class="icon-foot" />
+        <h8>Vols</h8>
+        <p class="col-foot"></p>
+      </a>
+      <a href="St&Tr.php" class="vol-foot">
+        <img src="css/img/station.png" class="icon-foot" />
+        <h8>Parking & Transports</h8>
+        <p class="col-foot"></p>
+      </a>
+      <a href="commerce.html" class="vol-foot">
+        <img src="css/img/e-commerce.png" class="icon-foot" />
+        <h8>Commerce</h8>
+        <p class="col-foot"></p>
+      </a>
+
+      <a href="guide.html" class="vol-foot">
+        <img src="css/img/guide.png" class="icon-foot" />
+        <h8>Guide</h8>
+        <p class="col-foot"></p>
+      </a>
+      <a href="contacte.html" class="vol-foot">
+        <ion-icon name="mail-outline"></ion-icon>
+        <h8>Contactez-nous</h8>
+        <p class="col-foot"></p>
+      </a>
+    </div>
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+    <p class="footer-copyright">
+      Copyright &copy; <span class="year"> 2021 </span> by IMAR, Aéroport
+      Hassan I Laâyoune.
+    </p>
+  </footer>
+   <!-- Vendor JS Files -->
+    <!-- <script src="js/aos.js"></script> -->
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+ </body>
+ <script
+ type="module"
+ src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+ nomodule
+ src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+</html>

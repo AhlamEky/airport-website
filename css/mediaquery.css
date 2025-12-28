@@ -1,0 +1,253 @@
+/*1424px
+@media (max-width: 89em) {
+  .logo-footer {
+    margin-right: 9rem;
+  }
+  .logo-fo {
+    height: 7rem;
+    width: 9rem;
+  }
+  h7 {
+    margin-left: 3rem;
+    margin-right: 2rem;
+
+    font-size: 1.7rem;
+  }
+}*/
+/*1376*/
+@media (max-width: 86em) {
+  .list-footer {
+    width: 90%;
+    padding: 3rem 3rem;
+    padding-left: 9rem;
+  }
+}
+
+/*1280px*/
+@media (max-width: 80em) {
+  .nav {
+    gap: 4rem;
+  }
+
+  .list-footer {
+    padding-left: 15rem;
+  }
+  h8 {
+    font-size: 1.7rem;
+  }
+}
+/*1200*/
+@media (max-width: 75em) {
+  .logo-fo {
+    height: 7rem;
+    width: 9rem;
+  }
+  h7 {
+    font-size: 1.5rem;
+  }
+  h8 {
+    font-size: 1.5rem;
+  }
+  .vol-foot {
+    width: 18rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/*1184*/
+@media (max-width: 74em) {
+  .logo-footer {
+    gap: 35%;
+  }
+}
+/*1104*/
+@media (max-width: 69em) {
+  .nav {
+    gap: 3rem;
+    padding-right: 1rem;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 1.7rem;
+  }
+  .icon-search i {
+    font-size: 2.1rem;
+  }
+  .reseau-s ion-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .icon-foot {
+    width: 4rem;
+    height: 4rem;
+  }
+  .vol-foot ion-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+/*992*/
+@media (max-width: 62em) {
+  .nav-logo {
+    height: 9rem;
+    width: 20.1rem;
+  }
+  .nav-logo:after {
+    left: 201px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .logo {
+    padding-top: 1rem;
+    width: 10rem;
+    height: 7rem;
+  }
+  .list-footer {
+    padding-left: 2rem;
+  }
+  .vol-foot {
+    width: 15rem;
+  }
+}
+/*912*/
+@media (max-width: 57em) {
+  .Vols {
+    height: 60vh;
+    width: 100%;
+    padding: 14rem 7rem;
+  }
+  h4 {
+    font-size: 40px;
+  }
+  h5 {
+    font-size: 30px;
+  }
+  .cherche-vol {
+    height: 18rem;
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-top: -10rem;
+  }
+  .heading span {
+    font-size: 1.7rem;
+  }
+
+  .stat,
+  .taxe,
+  .device,
+  .voiture {
+    padding-left: 2.2rem;
+    padding-right: 2rem;
+    height: 15rem;
+  }
+  .stat-img {
+    width: 9rem;
+    height: 8rem;
+  }
+  .text-sta,
+  .text-taxe,
+  .text-dev,
+  .text-loca {
+    font-size: 1.5rem;
+  }
+  .device-img {
+    width: 12rem;
+    height: 8.2rem;
+  }
+  .loca-img {
+    width: 13rem;
+    height: 12rem;
+  }
+  .taxe-img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .conseil {
+    border-top: 2rem solid rgb(128, 128, 128);
+    border-bottom: 2rem solid rgb(128, 128, 128);
+    height: 52vh;
+  }
+  h9 {
+    padding-top: 1rem;
+    font-size: 3.3rem;
+  }
+}
+/*896*/
+@media (max-width: 56em) {
+  .mobile-nav-btn {
+    display: block;
+    margin-left: 11rem;
+    margin-top: -2.5rem;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 0%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+  .nav-open .nav-container {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open ion-icon[name="close"] {
+    display: block;
+  }
+  .nav-open ion-icon[name="menu"] {
+    display: none;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 2.4rem;
+  }
+  .icon-search {
+    margin-right: 2rem;
+  }
+}
+/*896*/
+@media (max-width: 56em) {
+  .slide-container {
+    width: 75%;
+    height: 38rem;
+  }
+  .list-footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .logo-footer {
+    gap: 25%;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  h7 {
+    margin-top: 1rem;
+  }
+  .inform {
+    font-size: 1.8rem;
+  }
+  .ville-heure {
+    font-size: 1.7rem;
+  }
+  .info-vol {
+    height: 5rem;
+  }
+}
+/*656*/
+@media (max-width: 41em) {
+}

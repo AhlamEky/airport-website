@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.contacte {
+  background-image: url(img/contact.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.text-contacte {
+  background: rgba(192, 192, 193, 0.5);
+  box-shadow: inset -2px 3px 3px rgb(193, 192, 192);
+  margin-top: 9%;
+  margin-right: 50%;
+  margin-left: 9%;
+  text-align: center;
+  padding: 2rem 4.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+.text-contacte p {
+  font-weight: 500;
+  line-height: 3.7rem;
+  font-size: 2rem;
+  color: black;
+}
+
+button {
+  width: 22rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(124, 124, 129);
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+button:hover,
+button:active {
+  color: rgb(124, 124, 129);
+  background-color: rgb(255, 255, 255);
+}

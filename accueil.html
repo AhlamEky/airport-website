@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style,header,footer.css" rel="stylesheet" />
+    <link href="css/styleAcc.css" rel="stylesheet" />
+
+    <link href="css/mediaquery.css" rel="stylesheet" />
+    <!-- Favicons -->
+    <link href="img/IMAR (3).png" rel="icon" />
+    <link href="img/IMAR (3).png" rel="apple-touch-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Aéroport laayoune</title>
+  </head>
+  <body>
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+    <header class="header sticky nav-open">
+      <nav class="navv-logo">
+        <img class="logo" src="css/img/IMAR (4).png" alt="logo" />
+        <h22>Aéroport Hassan I Laâyoune</h22>
+      </nav>
+      <div class="nav-container">
+        <nav class="navv">
+          <a class="navv-linkk" href="accueil.html">
+            <ion-icon name="home" class="icon"></ion-icon>Accueil</a
+          >
+
+          <a class="navv-linkk" href="vols.php">Vols</a>
+          <a class="navv-linkk" href="St&Tr.php">Parking & Transport</a>
+          <a class="navv-linkk" href="commerce.html">Commerce</a>
+          <a class="navv-linkk" href="guide.html">Guide</a>
+        </nav>
+      </div>
+      <div class="icon-header">
+        <div class="icon-search">
+          <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+          <div class="btnlogin-popup">
+            <i class="fas fa-user" onclick="showform()" id="user-btn"></i>
+          </div>
+        </div>
+
+        <button class="mobile-nav-btn">
+          <ion-icon name="menu"></ion-icon>
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          id="search-bar"
+          placeholder="Ce que vous recherchez..."
+        />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+    <main>
+      <div class="colons">
+        <div class="Vols">
+          <h4>Bienvenue à</h4>
+          <h5>Aéroport Hassan I Laâyoune</h5>
+        </div>
+        <!----------------------------->
+        <div class="col--2">
+          <div class="wrapper">
+            <span class="icon-close"> <ion-icon name="close"></ion-icon></span>
+            <div class="form-box login">
+              <h4>Login</h4>
+
+              <form method="GET" action="login.php">
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                  <input type="email" required name="em" />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                  <span class="icon"
+                    ><ion-icon name="lock-closed"></ion-icon
+                  ></span>
+                  <input type="password" required name="ps" />
+                  <label>Password</label>
+                </div>
+
+                <div class="remember-forget">
+                  <label><input type="checkbox" />Remember me</label>
+                  <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn" name="s">Login</button>
+                <div class="login-register">
+                  <p>
+                    Don't have an account?<a href="#" class="register-link"
+                      >Register</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+
+            <div class="form-box register">
+              <h4>Registration</h4>
+
+              <form method="post" action="inscription.php">
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input type="text" required name="un" />
+                  <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                  <input type="email" required name="em" />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                  <span class="icon"
+                    ><ion-icon name="lock-closed"></ion-icon
+                  ></span>
+                  <input type="password" required name="ps" />
+                  <label>Password</label>
+                </div>
+
+                <div class="remember-forget">
+                  <label
+                    ><input type="checkbox" />I agree to the terms &
+                    conditions</label
+                  >
+                </div>
+
+                <button type="submit" class="btn" name="rg">Register</button>
+                <div class="login-register">
+                  <p>
+                    Already have an account?<a href="#" class="login-link"
+                      >Login</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----------------------------------------------->
+      <!----------------------------------------------->
+
+      <div class="cherche-vol">
+        <div class="info-vol">
+          <div class="inform">
+            <ion-icon class="icon-vol" name="airplane-outline"></ion-icon> Info
+            vol
+          </div>
+          <div class="ville-heure">
+            <div class="ville">Laâyoune</div>
+            <div id="time"></div>
+          </div>
+        </div>
+        <div class="f-vol">
+          <div class="vol-depart">
+            <h6>Départ ou Arrivée</h6>
+
+            <input
+              type="text"
+              placeholder="N° de vol, destination, provenance.."
+              class="arrive"
+            />
+          </div>
+          <div class="vol-arrivee">
+            <h6>Date</h6>
+
+            <input type="date" class="arrive" />
+          </div>
+          <div class="n-vol">
+            <h6>Heure</h6>
+            <input type="time" class="arrive" />
+          </div>
+        </div>
+      </div>
+      <!----------------------------------------------->
+      <!----------------------------------------------->
+      <section class="book" id="book">
+        <h1 class="heading">
+          <span>N</span>
+          <span>O</span>
+          <span>S</span>
+          &nbsp; &nbsp;
+          <span>S</span>
+          <span>E</span>
+          <span>R</span>
+          <span>V</span>
+          <span>I</span>
+          <span>C</span>
+          <span>E</span>
+          <span>S</span>
+        </h1>
+      </section>
+      <div class="colon-service">
+        <a href="#" class="stat">
+          <img src="css/img/station.png" class="stat-img" />
+          <p class="text-sta">Stationnement</p>
+        </a>
+        <a href="#" class="taxe">
+          <img src="css/img/taxes.jfif" class="taxe-img" />
+          <p class="text-taxe">Hors taxes</p>
+        </a>
+        <a href="#" class="device">
+          <img src="css/img/echange.jpg" class="device-img" />
+          <p class="text-dev">Echange de devises</p>
+        </a>
+        <a href="#" class="voiture">
+          <img src="css/img/loca.jpg" class="loca-img" />
+          <p class="text-loca">Location du voitures</p>
+        </a>
+      </div>
+
+      <!----------------------------------------------->
+      <!----------------------------------------------->
+
+      <section class="book" id="book">
+        <div class="heading">
+          <span>G</span>
+          <span>A</span>
+          <span>L</span>
+
+          <span>E</span>
+          <span>R</span>
+          <span>I</span>
+          <span>E</span>
+        </div>
+      </section>
+      <section class="slide-container">
+        <div class="slides">
+          <img src="css/img/ae(2).jpg" class="IMAG active" />
+          <img src="css/img/ae (3).jfif" class="IMAG" />
+          <img src="css/img/ae(1).jfif" class="IMAG" />
+          <img src="css/img/AE (5).jfif" class="IMAG" />
+          <img src="css/img/ae(6).jpg" class="IMAG" />
+          <img src="css/img/AE(7).jpg" class="IMAG" />
+        </div>
+
+        <div class="buttons">
+          <span class="next">&#10095;</span>
+          <span class="prev">&#10094;</span>
+        </div>
+
+        <div class="dotsContainer">
+          <div class="dot active" attr="0" onclick="switchImage(this)"></div>
+          <div class="dot" attr="1" onclick="switchImage(this)"></div>
+          <div class="dot" attr="2" onclick="switchImage(this)"></div>
+          <div class="dot" attr="3" onclick="switchImage(this)"></div>
+          <div class="dot" attr="4" onclick="switchImage(this)"></div>
+          <div class="dot" attr="5" onclick="switchImage(this)"></div>
+        </div>
+      </section>
+      <!----------------------------------------------->
+      <!----------------------------------------------->
+      <section class="conseil">
+        <h9>Conseils aux voyageurs</h9>
+        <p>
+          <a href="guide.html" class="plus"
+            >En savoir plus <ion-icon name="arrow-forward-outline"></ion-icon
+          ></a>
+        </p>
+      </section>
+    </main>
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+
+    <footer class="footer">
+      <div class="logo-footer">
+        <div class="cent-foo">
+          <img src="css/img/OIP2.jfif" class="logo-fo" />
+          <h7>Aéroport Hassan I Laâyoune</h7>
+        </div>
+        <div class="reseau-s">
+          <ion-icon name="logo-tiktok" class="logo-tiktok"></ion-icon>
+          <ion-icon name="logo-facebook" class="logo-facebook"></ion-icon>
+          <ion-icon name="logo-twitter" class="logo-twitter"></ion-icon>
+          <ion-icon name="logo-instagram" class="logo-instagram"></ion-icon>
+        </div>
+      </div>
+      <!----------------------------------------------->
+      <!----------------------------------------------->
+      <div class="list-footer">
+        <a href="vols.php" class="vol-foot">
+          <img src="css/img/vol.jfif" class="icon-foot" />
+          <h8>Vols</h8>
+          <p class="col-foot"></p>
+        </a>
+        <a href="St&Tr.php" class="vol-foot">
+          <img src="css/img/station.png" class="icon-foot" />
+          <h8>Parking & Transports</h8>
+          <p class="col-foot"></p>
+        </a>
+        <a href="commerce.html" class="vol-foot">
+          <img src="css/img/e-commerce.png" class="icon-foot" />
+          <h8>Commerce</h8>
+          <p class="col-foot"></p>
+        </a>
+
+        <a href="guide.html" class="vol-foot">
+          <img src="css/img/guide.png" class="icon-foot" />
+          <h8>Guide</h8>
+          <p class="col-foot"></p>
+        </a>
+        <a href="contacte.html" class="vol-foot">
+          <ion-icon name="mail-outline"></ion-icon>
+          <h8>Contactez-nous</h8>
+          <p class="col-foot"></p>
+        </a>
+      </div>
+      <!----------------------------------------------->
+      <!----------------------------------------------->
+      <p class="footer-copyright">
+        Copyright &copy; <span class="year"> 2021 </span> by IMAR, Aéroport
+        Hassan I Laâyoune.
+      </p>
+    </footer>
+    <!----------------------------------------------->
+    <!----------------------------------------------->
+    <script defor src="script/JavaScript.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

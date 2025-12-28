@@ -1,0 +1,461 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #080808;
+  background-color: #e1dcdc;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9rem;
+  width: 100%;
+  background-color: black /*#f0fff0 hsla(0, 0%, 100%, 0.95)*/;
+  position: relative;
+  opacity: 0.8;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgb(37, 37, 37) /*hsla(0, 0%, 100%, 0.95)*/;
+  box-shadow: 0 1.2rem 3.2rem rgba(255, 255, 255, 0.04);
+}
+.navv-logo {
+  display: flex;
+  height: 9rem;
+  width: 26.1rem;
+  background-color: black /*#e1dcdc*/;
+}
+.navv-logo:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 261px;
+  z-index: 2;
+  border-style: solid;
+  border-width: 90px 50px 0 0;
+  border-color: rgb(0, 0, 0) transparent transparent transparent;
+}
+.logo {
+  padding-left: 1rem;
+  width: 13rem;
+  height: 8rem;
+  color: #fff;
+  /*
+  mix-blend-mode: multiply;*/
+}
+h22 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: Julius Sans One;
+  text-align: center;
+  padding-top: 1.99rem;
+  width: 15rem;
+}
+.navv {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8rem;
+  padding-right: 3rem;
+  font-family: Kanit;
+}
+.navv-linkk:link,
+.navv-linkk:visited {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: wheat /*#020202*/;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 0.1rem;
+  list-style-type: disc;
+}
+
+.navv-linkk:hover,
+.navv-linkk:active {
+  color: #5499fa;
+}
+.icon {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+.icon-search {
+  display: flex;
+}
+.icon-search i {
+  color: white /*#000000*/;
+  margin-right: 3rem;
+  font-size: 2.6rem;
+  cursor: pointer;
+}
+
+.icon-search i:hover,
+.icon-search i:active {
+  color: #5499fa;
+}
+
+.search-form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: hsla(0, 0%, 100%, 0.95);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  padding: 1.5rem 2rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.search-form.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.search-form #search-bar {
+  width: 100%;
+  padding: 1rem;
+  color: #333;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+.search-form label {
+  color: #020202;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+.search-form label:hover {
+  color: #5499fa;
+}
+.mobile-nav-btn {
+  border: none;
+  background: none;
+  color: white;
+  display: none;
+}
+.mobile-nav-btn ion-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+ion-icon[name="close"] {
+  display: none;
+}
+/***************************************/
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(70px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  margin-top: -25rem;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+.wrapper.active-popup {
+  transform: scale(1);
+}
+.wrapper.active {
+  height: 520px;
+}
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper .form-box.login {
+  /* display: none;*/
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+.wrapper .icon-close ion-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.form-box h4 {
+  font-size: 2.5rem;
+  color: #1b2d3b;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #0c171f;
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 1000%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 500;
+  padding: 0 35px 0 5px;
+}
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.9rem;
+  color: #252525;
+  line-height: 57px;
+}
+.remember-forget {
+  font-size: 1.2rem;
+  color: #252525;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forget label input {
+  accent-color: #162938;
+  margin-right: 3px;
+}
+
+.remember-forget a {
+  color: #001b30;
+  text-decoration: none;
+}
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+.btn {
+  width: 100%;
+  height: 40px;
+  background: #0c171f;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: wheat;
+  font-weight: 500;
+}
+.login-register {
+  font-size: 1.2rem;
+  color: #0c171f;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.login-register p a {
+  color: #001b30;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+/*********************************************/
+/***************************/
+/***************************/
+.footer {
+  margin-top: 5rem;
+  background-color: rgb(38, 37, 37);
+  padding: 2rem 0.4rem 2.3rem 3rem;
+}
+.logo-footer {
+  gap: 40%;
+  display: flex;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  position: relative;
+  border-bottom: 2px solid rgb(68, 67, 67);
+}
+.cent-foo {
+  display: flex;
+  width: 40%;
+  /*margin-right: 5rem;*/
+}
+.logo-fo {
+  margin-left: 5%;
+  border-radius: 2rem;
+  height: 8rem;
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+h7 {
+  margin-left: 3rem;
+  line-height: 2rem;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+.reseau-s {
+  margin-top: 2.5rem;
+}
+.reseau-s ion-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e1dcdc;
+  margin-right: 2rem;
+}
+.logo-tiktok:hover,
+.logo-tiktok:active {
+  color: #cd201f;
+}
+.logo-facebook:hover,
+.logo-facebook:active {
+  color: #3b5999;
+}
+.logo-twitter:hover,
+.logo-twitter:active {
+  color: #55acee;
+}
+.logo-instagram:hover,
+.logo-instagram:active {
+  color: #e4405f;
+}
+.list-footer {
+  gap: 4rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 3rem 3rem;
+  margin: auto;
+  display: flex;
+
+  border-bottom: 2px solid rgb(68, 67, 67);
+}
+.vol-foot {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+}
+
+.icon-foot {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4rem;
+  background-color: white;
+  /*margin-right: 19rem;
+  margin-bottom: 2rem;*/
+}
+
+h8 {
+  padding-top: 4rem;
+  font-size: 2rem;
+  font-family: 600;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2.7rem;
+}
+h8:hover,
+h8:active {
+  color: #236acf;
+  text-decoration: none;
+}
+.col-foot {
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  color: #d2d2d2;
+}
+.vol-foot ion-icon {
+  display: flex;
+  flex-wrap: wrap;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  margin: auto;
+  /*margin-bottom: 2rem;
+  margin-right: 19rem;*/
+}
+.vol-foot ion-icon:hover,
+.vol-foot ion-icon:active {
+  color: #3e5af8;
+}
+.footer-copyright {
+  color: rgb(248, 241, 227);
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+/******************/
+/******************/

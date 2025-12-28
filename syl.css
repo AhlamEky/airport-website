@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: arial,sans-serif;
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.6;
+
+}
+#key{
+    background-image: url(img/plane\ aesthetic.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    opacity: 0,8;
+}
+#key h1{
+
+    font-size: 50px;
+}
+#key  p{
+    font-size: 15px;
+}
+
+#key .button{
+    width: 200px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+    border: #fff 1px solid;
+    padding: 10px 50px;
+    border-radius: 25px;
+    border-top: 20px;
+
+    background-color: #ffffff46;
+   margin: 20px 10px;
+   font-weight: bolder;
+}
+#key .button:hover{
+    background-color: #00000076;
+    color: #ffffffbe; 
+    
+}
+
+
+
